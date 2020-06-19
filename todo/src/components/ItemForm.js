@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-const ItemForm = ({add, clearCompleted}) => {
+const ItemForm = ({add}) => {
 
     const[newItemText, setNewItemText] = useState("");
     const handleChanges = e => {
@@ -13,10 +13,10 @@ const ItemForm = ({add, clearCompleted}) => {
         setNewItemText("");
     }
 
-    const handleClear = e => {
-        e.preventDefault();
-        clearCompleted();
-    }
+    // const handleClear = e => {
+    //     e.preventDefault();
+    //     clearCompleted();
+    // // }
      
     return(
         <div>
@@ -33,7 +33,7 @@ const ItemForm = ({add, clearCompleted}) => {
                     />
                 </label>
                 <button >Add</button>
-                <button onClick={handleClear}>Clear Completed</button>
+                {/* <button onClick={handleClear}>Clear Completed</button> */}
             </form>
         </div>
     )

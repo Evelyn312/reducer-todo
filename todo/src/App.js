@@ -25,11 +25,11 @@ function App() {
   
   return (
     <div className="App">
-      <ItemForm add={addItem} clearCompleted={removeCompleted}/>
+      <ItemForm add={addItem}/>
       <ul>
         <h3>Todo List</h3>
         {state.todos.map((item, key) => 
-          <ItemList key={key} todo={item} toggle={toggleComplete} remove={removeCompleted}/>
+          <ItemList key={key} todo={item} toggle={toggleComplete} remove={removeCompleted} clearCompleted={removeCompleted}/>
         )}
       </ul>
 
